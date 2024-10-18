@@ -1,0 +1,33 @@
+{
+    "name": "file-structure-generator",
+    "version": "1.0.0",
+    "description": "Generate file structure from local folder",
+    "main": "dist/file-structure-generator.js",
+    "types": "dist/file-structure-generator.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/file-structure-generator.js",
+        "prepublishOnly": "npm run build"
+    },
+    "bin": {
+        "file-structure-generator": "./dist/file-structure-generator.js"
+    },
+    "keywords": [
+        "file",
+        "structure",
+        "generator",
+        "tree"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+        "ignore": "^5.2.0",
+        "js-yaml": "^4.1.0",
+        "fast-xml-parser": "^4.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "@types/js-yaml": "^4.0.5",
+        "typescript": "^4.9.4"
+    }
+}
