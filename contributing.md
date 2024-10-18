@@ -35,12 +35,16 @@ Ensure your project structure looks like this:
 file-structure-generator/
 ├── src/
 │   └── file-structure-generator.ts
+├── dist/
+│   └── file-structure-generator.js
 ├── package.json
 ├── tsconfig.json
 ├── run-file-structure-generator.sh
 ├── README.md
 └── CONTRIBUTING.md
 ```
+
+Note: Unlike many TypeScript projects, we do commit the `dist` directory to version control. This is to facilitate running the script directly from GitHub without requiring a build step.
 
 ## Building the Project
 
@@ -50,7 +54,7 @@ To build the project, run:
 npm run build
 ```
 
-This command compiles the TypeScript code into JavaScript in the `dist/` directory.
+This command compiles the TypeScript code into JavaScript in the `dist/` directory. After building, make sure to commit any changes in the `dist` directory.
 
 ## Running the Project Locally
 
@@ -74,8 +78,12 @@ npm start -- --root /path/to/directory --output json
    ```
 2. Make your changes in the `src/file-structure-generator.ts` file.
 3. If you've added new functionality, consider adding tests (if applicable).
-4. Ensure the project still builds successfully after your changes.
-5. Commit your changes with a clear and descriptive commit message.
+4. Ensure the project still builds successfully after your changes:
+   ```
+   npm run build
+   ```
+5. Commit your changes, including the updated files in the `dist` directory.
+6. Provide a clear and descriptive commit message.
 
 ## Submitting a Pull Request
 
