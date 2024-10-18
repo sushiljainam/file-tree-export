@@ -1,4 +1,4 @@
-# Contributing to File Structure Generator
+# Contributing to file-tree-export
 
 We're glad you're interested in contributing to the File Structure Generator project! This document will guide you through the process of setting up your development environment and making contributions.
 
@@ -18,8 +18,8 @@ We're glad you're interested in contributing to the File Structure Generator pro
 1. Fork the repository on GitHub.
 2. Clone your forked repository locally:
    ```
-   git clone https://github.com/your-username/file-structure-generator.git
-   cd file-structure-generator
+   git clone https://github.com/your-username/file-tree-export.git
+   cd file-tree-export
    ```
 3. Install Node.js if you haven't already (we recommend using the LTS version).
 4. Install project dependencies:
@@ -32,16 +32,16 @@ We're glad you're interested in contributing to the File Structure Generator pro
 Ensure your project structure looks like this:
 
 ```
-file-structure-generator/
+file-tree-export/
 ├── src/
-│   └── file-structure-generator.ts
+│   └── file-tree-export.ts
 ├── dist/
-│   └── file-structure-generator.js
+│   └── file-tree-export.js
 ├── .husky/
 │   └── pre-commit
 ├── package.json
 ├── tsconfig.json
-├── run-file-structure-generator.sh
+├── run-file-tree-export.sh
 ├── README.md
 └── CONTRIBUTING.md
 ```
@@ -66,6 +66,12 @@ After building the project, you can run it locally using:
 npm start -- [options]
 ```
 
+Or, if you've installed it globally:
+
+```
+file-tree-export [options]
+```
+
 For example:
 
 ```
@@ -78,7 +84,7 @@ npm start -- --root /path/to/directory --output json
    ```
    git checkout -b feature/your-feature-name
    ```
-2. Make your changes in the `src/file-structure-generator.ts` file.
+2. Make your changes in the `src/file-tree-export.ts` file.
 3. If you've added new functionality, consider adding tests (if applicable).
 4. Stage your changes:
    ```

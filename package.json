@@ -1,25 +1,27 @@
 {
-    "name": "file-structure-generator",
+    "name": "file-tree-export",
     "version": "1.0.0",
-    "description": "Generate file structure from local folder",
-    "main": "dist/file-structure-generator.js",
-    "types": "dist/file-structure-generator.d.ts",
+    "description": "Generate and export file structure from local folder",
+    "main": "dist/file-tree-export.js",
+    "types": "dist/file-tree-export.d.ts",
     "scripts": {
         "build": "tsc",
-        "start": "node dist/file-structure-generator.js",
+        "start": "node dist/file-tree-export.js",
         "prepublishOnly": "npm run build",
         "prepare": "husky"
     },
     "bin": {
-        "file-structure-generator": "./dist/file-structure-generator.js"
+        "file-tree-export": "./dist/file-tree-export.js"
     },
     "keywords": [
         "file",
+        "tree",
         "structure",
         "generator",
-        "tree"
+        "export",
+        "directory"
     ],
-    "author": "Your Name",
+    "author": "Sushil Jain",
     "license": "MIT",
     "dependencies": {
         "fast-xml-parser": "^4.2.0",

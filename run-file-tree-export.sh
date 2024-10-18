@@ -10,10 +10,10 @@ fi
 TMP_DIR=$(mktemp -d)
 
 # Download the script
-curl -o "$TMP_DIR/file-structure-generator.js" https://raw.githubusercontent.com/yourusername/file-structure-generator/main/dist/file-structure-generator.js
+curl -o "$TMP_DIR/file-tree-export.js" https://raw.githubusercontent.com/sushiljainam/file-tree-export/main/dist/file-tree-export.js
 
 # Run the script with provided arguments
-node "$TMP_DIR/file-structure-generator.js" "$@"
+node "$TMP_DIR/file-tree-export.js" "$@"
 
 # Clean up
 rm -rf "$TMP_DIR"

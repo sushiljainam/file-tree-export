@@ -1,6 +1,6 @@
-# File Structure Generator
+# file-tree-export
 
-A flexible and powerful tool to generate file structure representations from local folders. This tool supports multiple output formats and respects ignore files like `.gitignore`.
+A flexible and powerful tool to generate and export file structure representations from local folders. This tool supports multiple output formats and respects ignore files like `.gitignore`.
 
 ## Table of Contents
 
@@ -16,16 +16,16 @@ A flexible and powerful tool to generate file structure representations from loc
 
 ## Installation
 
-You can install the File Structure Generator globally via npm:
+You can install file-tree-export globally via npm:
 
 ```bash
-npm install -g file-structure-generator
+npm install -g file-tree-export
 ```
 
 Or run it directly from GitHub:
 
 ```bash
-curl -s https://raw.githubusercontent.com/yourusername/file-structure-generator/main/run-file-structure-generator.sh | bash -s -- [options]
+curl -s https://raw.githubusercontent.com/yourusername/file-tree-export/main/run-file-tree-export.sh | bash -s -- [options]
 ```
 
 ## Usage
@@ -35,15 +35,15 @@ curl -s https://raw.githubusercontent.com/yourusername/file-structure-generator/
 After installation, you can use the tool from the command line:
 
 ```bash
-file-structure-generator [options]
+file-tree-export [options]
 ```
 
 ### API Usage
 
-You can also use the File Structure Generator in your Node.js projects:
+You can also use file-tree-export in your Node.js projects:
 
 ```javascript
-const { generateFileStructure } = require('file-structure-generator');
+const { generateFileStructure } = require('file-tree-export');
 
 const options = {
   root: '/path/to/directory',
@@ -77,19 +77,19 @@ console.log(result);
 1. Generate a tree structure for the current directory:
 
 ```bash
-file-structure-generator
+file-tree-export
 ```
 
 2. Generate JSON output for a specific directory with a depth limit:
 
 ```bash
-file-structure-generator --root /path/to/directory --output json --maxDepth 5
+file-tree-export --root /path/to/directory --output json --maxDepth 5
 ```
 
 3. Generate YAML output ignoring files specified in `.npmignore`:
 
 ```bash
-file-structure-generator --output yaml --ignoreFile .npmignore
+file-tree-export --output yaml --ignoreFile .npmignore
 ```
 
 ## Contributing

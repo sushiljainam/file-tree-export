@@ -1,9 +1,9 @@
-// file-structure-generator.ts
+// file-tree-export.ts
 
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 import ignore from 'ignore';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { XMLBuilder } from 'fast-xml-parser';
 
 interface TreeNode {
