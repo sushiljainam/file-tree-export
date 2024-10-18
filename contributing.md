@@ -37,6 +37,8 @@ file-structure-generator/
 │   └── file-structure-generator.ts
 ├── dist/
 │   └── file-structure-generator.js
+├── .husky/
+│   └── pre-commit
 ├── package.json
 ├── tsconfig.json
 ├── run-file-structure-generator.sh
@@ -44,7 +46,7 @@ file-structure-generator/
 └── CONTRIBUTING.md
 ```
 
-Note: Unlike many TypeScript projects, we do commit the `dist` directory to version control. This is to facilitate running the script directly from GitHub without requiring a build step.
+Note: We commit the `dist` directory to version control to facilitate running the script directly from GitHub without requiring a build step.
 
 ## Building the Project
 
@@ -54,7 +56,7 @@ To build the project, run:
 npm run build
 ```
 
-This command compiles the TypeScript code into JavaScript in the `dist/` directory. After building, make sure to commit any changes in the `dist` directory.
+This command compiles the TypeScript code into JavaScript in the `dist/` directory.
 
 ## Running the Project Locally
 
@@ -78,12 +80,29 @@ npm start -- --root /path/to/directory --output json
    ```
 2. Make your changes in the `src/file-structure-generator.ts` file.
 3. If you've added new functionality, consider adding tests (if applicable).
-4. Ensure the project still builds successfully after your changes:
+4. Stage your changes:
    ```
-   npm run build
+   git add .
    ```
-5. Commit your changes, including the updated files in the `dist` directory.
-6. Provide a clear and descriptive commit message.
+5. Commit your changes:
+   ```
+   git commit -m "Your descriptive commit message"
+   ```
+
+   Note: The pre-commit hook will automatically build the project and stage the updated `dist` directory before creating the commit.
+
+6. Push your changes to your fork:
+   ```
+   git push origin feature/your-feature-name
+   ```
+
+## Git Hooks
+
+This project uses Husky and lint-staged to maintain code quality and ensure the `dist` directory is always up-to-date. The following hooks are in place:
+
+- Pre-commit: Automatically builds the project and stages the updated `dist` directory before each commit.
+
+These hooks help ensure that the compiled JavaScript in the `dist` directory always matches the TypeScript source code.
 
 ## Submitting a Pull Request
 
